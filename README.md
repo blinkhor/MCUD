@@ -1,9 +1,9 @@
 
-# MCUAD: Music Clinical Use Audio Dataset
+# HMCUD: Historical Music Clinical Usage Dataset
 
 ## Overview
 
-**MCUAD (Music Clinical Use Audio Dataset)** is a comprehensive dataset designed for clinical music therapy applications. It contains a variety of audio tracks along with metadata, acoustic features, and emotion tags to support the selection and analysis of music in clinical settings. The dataset is particularly useful for researchers and clinicians working on music therapy, emotion-based music applications, and acoustic feature extraction for therapeutic purposes.
+**HMCUD (Historical Music Clinical Usage Dataset)** is a comprehensive dataset designed for clinical music therapy applications. It contains a variety of audio tracks along with metadata, acoustic features, and emotion tags to support the selection and analysis of music in clinical settings. The dataset is particularly useful for researchers and clinicians working on music therapy, emotion-based music applications, and acoustic feature extraction for therapeutic purposes.
 
 ### Key Features:
 - **Acoustic Fingerprint Data**: Includes audio features like tempo, pitch, and energy extracted from each track.
