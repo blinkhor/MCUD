@@ -16,21 +16,7 @@
 
 The dataset is organized as follows:
 
-```
-
-/MCUAD
-│
-├── /Embeddings              # Pre-computed acoustic embeddings for each song
-├── /Spectrogram             # Spectrogram images for each song
-│
-├── Playlist.xlsx            # Playlist information (track lists, sequencing)
-├── Songs.xlsx               # Metadata for each song (artist, album, release year)
-├── Songs\_EmotionTags.xlsx   # Emotion tags assigned to each song
-├── Songs\_EmotionTagsProbability.xlsx # Probability of each emotion tag for each song
-├── Songs\_Features.xlsx      # Acoustic features (tempo, pitch, energy, etc.)
-└── Songs\_GenreTags.xlsx     # Genre tags assigned to each song
-
-````
+![Dataset Structure](imgs/img1.png "Dataset Structure")
 
 ### File Descriptions
 
@@ -64,19 +50,15 @@ import pandas as pd
 # Example: Convert Songs.xlsx to CSV
 df = pd.read_excel('Songs.xlsx')
 df.to_csv('Songs.csv', index=False)
-````
+```
 
 ### 4. Licensing
 
-The **MCUAD** dataset is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to use, modify, and share the dataset, as long as you give appropriate credit to the authors.
+The **HMCUD** dataset is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to use, modify, and share the dataset, as long as you give appropriate credit to the authors.
 
 ### 5. Acknowledgments
 
 Please cite this dataset if you use it in your research or applications:
-
-```
-Author(s), Year. MCUAD: Music Clinical Use Audio Dataset. DOI or link to dataset.
-```
 
 ## Ethical Considerations
 
@@ -86,14 +68,6 @@ The **MCUAD** dataset has been created with privacy and ethical considerations i
 
 * **Music Licensing**: Please ensure that you have the appropriate licenses to use the audio tracks, especially for commercial purposes.
 * **Clinical Use**: Always consult a licensed professional when applying the dataset for clinical or therapeutic purposes.
-
-## Contact
-
-If you have any questions or feedback regarding the dataset, please reach out to the project maintainers:
-
-* **Email**: \[[your-email@example.com](mailto:your-email@example.com)]
-* **GitHub**: \[GitHub link to repository]
-* **Project Website**: \[if applicable]
 
 ## License
 
