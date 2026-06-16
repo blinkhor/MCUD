@@ -52,6 +52,67 @@ df = pd.read_excel('Songs.xlsx')
 df.to_csv('Songs.csv', index=False)
 ```
 
+### 3. Execute Scripts (Extract mel spectrograms, embeddings and other extra info from downloaded audio if needed)
+
+Install Dependencies
+
+```bash
+# Create virtual environment
+conda create -n music_features python=3.10
+conda activate music_features
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+#### Script 1: Essentia Feature Extraction
+
+```bash
+python 01_essentia_feature_extractor.py audio.wav -o features.npy
+```
+
+Supported features:
+
+* MFCC (13 dims + delta + delta-delta)
+
+* Spectral centroid, flux, entropy, bandwidth, rolloff
+
+* Zero crossing rate, RMS energy
+
+* Chroma features
+
+* Key/Tempo features
+
+#### Script 2: Mel Spectrogram
+
+```bash
+python 02_librosa_melspectrogram.py audio.wav -o melspec.npy
+```
+
+Options:
+
+* `--n-mels 128`: Number of MEL filters
+
+* `--n-fft 2048`: FFT window size
+
+* `--hop-length 512`: Hop size
+
+* `--db`: Output in dB scale
+
+#### Script 3: OpenL3 Embedding
+
+```bash
+python 03_openl3_embeddings.py audio.wav -o embedding.npy
+```
+
+Options:
+
+* `--model music`: Use music model (default) or audio generic model
+
+* `--embedding-size 512`: Embedding dimension (256 or 512)
+
+* `--pooling mean`: Pooling method (mean/max/mean+std/none)
+
 ### 4. Licensing
 
 The **HMCUD** dataset is released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to use, modify, and share the dataset, as long as you give appropriate credit to the authors.
